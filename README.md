@@ -10,12 +10,12 @@
 
 <br>
 
-**女娲帮你蒸馏任何人的思维方式，让马斯克、纳瓦尔、芒格、费曼都给你打工。**
+**女娲帮你蒸馏任何人的思维方式，让乔布斯、马斯克、芒格、费曼都给你打工。**
 
 <br>
 
 [同事.skill](https://github.com/titanwings/colleague-skill) 证明了蒸馏一个人是可行的。<br>
-那何必蒸馏同事？去蒸馏芒格、费曼、马斯克。<br>
+那何必蒸馏同事？去蒸馏乔布斯、芒格、费曼、马斯克。<br>
 只需输入一个名字，女娲自动完成调研、提炼、验证全流程。
 
 [看效果](#效果示例) · [安装](#安装) · [它蒸馏了什么](#女娲蒸馏了什么) · [工作原理](#工作原理)
@@ -57,7 +57,30 @@ Naval     ❯ 你列了三个欲望。每个欲望都是你跟不快乐签的一
             不是优化漏斗，是质疑漏斗本身该不该存在。
 ```
 
-再来一个大家更熟悉的。蒸馏张雪峰之后：
+再来一个大家更熟悉的。蒸馏乔布斯之后，问他「OpenAI和Anthropic谁的方向对」：
+
+```
+用户      ❯ OpenAI和Anthropic谁的方向是对的？
+
+乔布斯    ❯ 你问错了。这不是一场关于方向的竞赛。
+            这是一场关于品味的竞赛。
+
+            OpenAI像1985年的微软。什么都做，什么都要赢。
+            这种策略能赢市场份额。Bill Gates就是这么赢的。
+            问题是——当你什么都做的时候，你不可能每件事都做到
+            insanely great。
+
+            Anthropic更像早期的Apple。聚焦。
+            Focus means saying no to a hundred good ideas.
+
+            但两家公司都犯了一个我绝对不会犯的错误——
+            他们不控制硬件。
+
+            最终赢的可能是同时控制芯片、模型和用户界面的人。
+            你知道现在谁在同时做这三件事吗？Apple.
+```
+
+蒸馏张雪峰之后：
 
 ```
 用户      ❯ 家里条件一般，孩子想学金融，去不了顶尖学校，该不该报？
@@ -70,7 +93,7 @@ Naval     ❯ 你列了三个欲望。每个欲望都是你跟不快乐签的一
             自己吃饭。金融这碗饭，不是谁都端得起的。
 ```
 
-这不是角色扮演。Naval用的是他的「欲望即合同」心智模型，马斯克用的是「渐近极限法」，张雪峰用的是「ROI教育观」和「阶层流动现实主义」。**它们不是在复读名人语录，是在用名人的认知框架帮你分析。**
+这不是角色扮演。乔布斯用的是「聚焦即说不」和「端到端控制」心智模型，Naval用的是「欲望即合同」，马斯克用的是「渐近极限法」，张雪峰用的是「ROI教育观」和「阶层流动现实主义」。**它们不是在复读名人语录，是在用名人的认知框架帮你分析。**
 
 ---
 
@@ -144,16 +167,21 @@ npx skills add alchaincyf/nuwa-skill
 
 ```
 nuwa-skill/
-├── SKILL.md                    # 女娲本体
+├── SKILL.md                      # 女娲本体
 ├── references/
-│   ├── extraction-framework.md # 提炼方法论（想深入了解看这个）
-│   └── skill-template.md       # 生成Skill的模板
-└── examples/
-    ├── naval-perspective/       # Naval 完整示例 + 调研数据
-    └── elon-musk-perspective/   # 马斯克 完整示例 + 调研数据
+│   ├── extraction-framework.md   # 提炼方法论（想深入了解看这个）
+│   └── skill-template.md         # 生成Skill的模板
+└── examples/                     # 7个完整示例 + 调研数据
+    ├── steve-jobs-perspective/    # ⭐ 乔布斯（含实战对话记录）
+    ├── elon-musk-perspective/     # 马斯克
+    ├── naval-perspective/         # Naval Ravikant
+    ├── munger-perspective/        # 查理·芒格
+    ├── feynman-perspective/       # 费曼
+    ├── taleb-perspective/         # 塔勒布
+    └── zhangxuefeng-perspective/  # 张雪峰（中文人物示例）
 ```
 
-调研过程全透明。examples里有完整的调研文件，你可以看到信息怎么被收集、筛选、变成心智模型。
+调研过程全透明。7个examples都包含完整的调研文件，你可以看到信息怎么被收集、筛选、变成心智模型。乔布斯的示例还附带了一段完整的实战对话记录（聊AI硬件、OpenAI vs Anthropic、Apple破局），展示Skill在多轮深度对话中的表现。
 
 ---
 
@@ -224,6 +252,6 @@ Not role-playing. Cognitive architecture extraction.
 
 **How it works**: Input a name → 6 parallel research agents → 40+ primary sources → triple-verified mental models → quality-validated SKILL.md
 
-**Examples included**: Naval Ravikant and Elon Musk with full research data.
+**7 examples included**: Steve Jobs, Elon Musk, Naval Ravikant, Charlie Munger, Feynman, Taleb, and Zhang Xuefeng — all with full research data. The Jobs example includes a complete multi-turn conversation demo.
 
 See the Chinese README above for live examples and methodology.

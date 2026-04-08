@@ -253,18 +253,18 @@ spawn subagent时，用以下结构给任务（以Agent 1著作为例）：
 #### 工具辅助（如可用）
 - 书籍：Z-Library/LibGen搜索下载 → 存入 `sources/books/`
 - 视频字幕获取（已提供脚本，直接调用）：
-  - **Step 1 下载字幕**：`bash [skill目录]/references/download_subtitles.sh <YouTube_URL> [输出目录]`
+  - **Step 1 下载字幕**：`bash [skill目录]/scripts/download_subtitles.sh <YouTube_URL> [输出目录]`
     - 自动优先人工字幕 → 中文 → 英文 → 自动生成字幕
     - 输出SRT/VTT文件到指定目录
-  - **Step 2 清洗为纯文本**：`python3 [skill目录]/references/srt_to_transcript.py <input.srt> [output.txt]`
+  - **Step 2 清洗为纯文本**：`python3 [skill目录]/scripts/srt_to_transcript.py <input.srt> [output.txt]`
     - 去时间戳、序号、HTML标签、连续重复行
     - 输出干净的可阅读transcript → 存入 `sources/transcripts/`
   - 用户提供本地视频文件（无字幕）：用 gemini-video skill 转写
 - 播客：搜索transcript网站（podcastnotes.org等）
-- 调研摘要生成（Phase 1.5用）：`python3 [skill目录]/references/merge_research.py <skill目录>`
+- 调研摘要生成（Phase 1.5用）：`python3 [skill目录]/scripts/merge_research.py <skill目录>`
   - 自动扫描 `references/research/01-06.md`，统计来源数、一手/二手占比、关键发现
   - 输出Phase 1.5检查点的markdown表格，无需手动统计
-- 质量自检（Phase 4用）：`python3 [skill目录]/references/quality_check.py <SKILL.md路径>`
+- 质量自检（Phase 4用）：`python3 [skill目录]/scripts/quality_check.py <SKILL.md路径>`
   - 自动检查6项通过标准：心智模型数量、局限性、表达DNA、诚实边界、内在张力、一手来源占比
   - 输出逐项PASS/FAIL和总结
 
